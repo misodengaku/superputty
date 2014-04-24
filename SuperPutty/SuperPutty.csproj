@@ -209,6 +209,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SessionTreeview.ja-JP.resx">
+      <DependentUpon>SessionTreeview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SessionTreeview.resx">
       <DependentUpon>SessionTreeview.cs</DependentUpon>
       <SubType>Designer</SubType>
