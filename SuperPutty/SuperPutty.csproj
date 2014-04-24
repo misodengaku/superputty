@@ -177,6 +177,9 @@
     <EmbeddedResource Include="dlgMouseFeedback.resx">
       <DependentUpon>dlgMouseFeedback.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSuperPutty.ja-JP.resx">
+      <DependentUpon>frmSuperPutty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTransferStatus.resx">
       <DependentUpon>frmTransferStatus.cs</DependentUpon>
     </EmbeddedResource>
