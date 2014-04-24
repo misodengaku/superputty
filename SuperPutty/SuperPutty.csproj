@@ -168,8 +168,17 @@
     <EmbeddedResource Include="DebugLogViewer.resx">
       <DependentUpon>DebugLogViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="dlgEditSession.ja-JP.resx">
+      <DependentUpon>dlgEditSession.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="dlgEditSession.resx">
       <DependentUpon>dlgEditSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgFindPutty.ja-JP.resx">
+      <DependentUpon>dlgFindPutty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgLogin.ja-JP.resx">
+      <DependentUpon>dlgLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dlgLogin.resx">
       <DependentUpon>dlgLogin.cs</DependentUpon>
