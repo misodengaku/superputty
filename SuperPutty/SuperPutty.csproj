@@ -195,6 +195,9 @@
     <EmbeddedResource Include="frmTransferStatus.resx">
       <DependentUpon>frmTransferStatus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RemoteFileListPanel.ja-JP.resx">
+      <DependentUpon>RemoteFileListPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RemoteFileListPanel.resx">
       <DependentUpon>RemoteFileListPanel.cs</DependentUpon>
     </EmbeddedResource>
