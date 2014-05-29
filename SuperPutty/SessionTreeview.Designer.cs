@@ -30,7 +30,6 @@
         {
 			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SessionTreeview));
-			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.contextMenuStripAddTreeItem = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.newSessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,21 +39,9 @@
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.fileBrowserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+			this.treeView1 = new System.Windows.Forms.TreeView();
 			this.contextMenuStripAddTreeItem.SuspendLayout();
 			this.SuspendLayout();
-			// 
-			// treeView1
-			// 
-			resources.ApplyResources(this.treeView1, "treeView1");
-			this.treeView1.AllowDrop = true;
-			this.treeView1.ContextMenuStrip = this.contextMenuStripAddTreeItem;
-			this.treeView1.ImageList = this.imageList1;
-			this.treeView1.Name = "treeView1";
-			this.treeView1.ShowLines = false;
-			this.treeView1.ShowPlusMinus = false;
-			this.treeView1.ShowRootLines = false;
-			this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
-			this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
 			// 
 			// contextMenuStripAddTreeItem
 			// 
@@ -117,6 +104,19 @@
 			this.imageList1.Images.SetKeyName(0, "folder.png");
 			this.imageList1.Images.SetKeyName(1, "computer.png");
 			// 
+			// treeView1
+			// 
+			resources.ApplyResources(this.treeView1, "treeView1");
+			this.treeView1.AllowDrop = true;
+			this.treeView1.ContextMenuStrip = this.contextMenuStripAddTreeItem;
+			this.treeView1.ImageList = this.imageList1;
+			this.treeView1.Name = "treeView1";
+			this.treeView1.ShowLines = false;
+			this.treeView1.ShowPlusMinus = false;
+			this.treeView1.ShowRootLines = false;
+			this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+			this.treeView1.DoubleClick += new System.EventHandler(this.treeView1_DoubleClick);
+			// 
 			// SessionTreeview
 			// 
 			resources.ApplyResources(this, "$this");
@@ -124,7 +124,7 @@
 			this.Controls.Add(this.treeView1);
 			this.Name = "SessionTreeview";
 			this.ShowIcon = false;
-			this.TabText = "Sessions";
+			this.TabText = "セッション";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SessionTreeviewFormClosed);
 			this.contextMenuStripAddTreeItem.ResumeLayout(false);
 			this.ResumeLayout(false);
