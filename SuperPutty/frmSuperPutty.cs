@@ -37,6 +37,7 @@ using SuperPutty.Classes;
 using System.Windows.Input;
 using System.Collections.Concurrent;
 using System.Linq;
+using System.Resources;
 
 namespace SuperPutty
 {
@@ -79,6 +80,7 @@ namespace SuperPutty
 		GlobalHotkeys m_hotkeys;
 		KeyboardListener m_keyboard;
 		WindowTitleTracker m_titleTracker;
+		ResourceManager m_resourcemanager;
 
 		~frmSuperPutty()
 		{
@@ -92,6 +94,7 @@ namespace SuperPutty
 			m_hotkeys = new GlobalHotkeys();
 			m_keyboard = new KeyboardListener(this, m_hotkeys);
 			m_titleTracker = new WindowTitleTracker(this);
+			m_resourcemanager = new ResourceManager("SuperPutty.messageStrings", typeof(frmSuperPutty).Assembly);
 			//m_outputDetector = new MinttyOutputDetector(this, m_outputMapping);
 			registerHotkeys();
 
@@ -125,7 +128,8 @@ namespace SuperPutty
 
 			if (String.IsNullOrEmpty(PuttyExe))
 			{
-				MessageBox.Show("Cannot find PuTTY installation. Please visit http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html to download a copy",
+				// 
+				MessageBox.Show(m_resourcemanager.GetString("puttyCannotFindString"),
 					"PuTTY Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				Application.Exit();
 				System.Environment.Exit(1);
@@ -162,7 +166,8 @@ namespace SuperPutty
 			{
 				this.ConnectToolStrip.Hide();
 				this.quickConnectToolStripMenuItem.Checked = false;
-			}else
+			}
+			else
 			{
 				this.quickConnectToolStripMenuItem.Checked = true;
 			}
@@ -764,7 +769,8 @@ namespace SuperPutty
 
 		private void CopyPuttySessionsToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("Do you want to copy all sessions from PuTTY? This may overwrite identically named sessions in SuperPutty!", "SuperPutty", MessageBoxButtons.YesNo) == DialogResult.Yes)
+			// sessionOverwriteString
+			if (MessageBox.Show(m_resourcemanager.GetString("sessionOverwriteString"), "SuperPutty", MessageBoxButtons.YesNo) == DialogResult.Yes)
 			{
 				SessionTreeview.copySessionsFromPuTTY();
 				m_Sessions.LoadSessions();
